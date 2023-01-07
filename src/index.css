@@ -2,23 +2,33 @@
     --main-color: #003366;
     --secondary-color: #0080ff; 
     --text-color: #808080;
+    --margin-color: #F6F6F5;
+    --background: #FCFBF9; 
 }
 
 body {
     color: var(--text-color);
     font-weight: bold;
-    margin: 0 300px;
+    width: 80%;
+    margin: auto;
 }
 
 li{
     list-style: none;
 }
 
+h2{
+    font-size:  3.5em;
+    color: var(--main-color);
+}
 
+h3{
+    font-size: 2em;
+    color: var(--main-color);
+}
 .navbar{
     display: flex;
     justify-content: space-between;
-    margin-top: 50px;
 }
 
 .navbar p{
@@ -47,13 +57,19 @@ li{
 
 .nav-menu a:focus{
     color: white;
-    background: var(--secondary-color);  
+    background: var(--secondary-color);
+    border-radius: 10px; 
 }
+
+/* Intro section CSS */
 
 .intro{
     display: flex;
-    width: 100%;
     margin-top: 100px;
+}
+
+.title-container{
+    width: 63%;
 }
 
 .title{
@@ -66,13 +82,12 @@ li{
 }
 
 .cover-image{
-    /* width: 100%; */
-    position: relative;
-    left: 25%;
-}
-
-.cover-image img{
     width: 90%;
+    height: 1500px;
+    position: relative;
+    float: right;
+    left: 15%;
+    z-index: -1;
 }
 
 .title-icons{
@@ -80,10 +95,119 @@ li{
     align-items: center;
     justify-content: space-between;
     font-size: 1.5em;
+    margin-top: 100px;
 }
 
 .title-icons img{
-    width: 40px;
-    height: 40px;
+    width: 38px;
+    height: 35px;
     background-color: #FFFAC4;
+}
+
+.icons-text{
+    color: var(--main-color)
+}
+
+/* Schedule your vaccines section  */
+.schedule-section{
+    margin-top: 500px;
+    font-size: 1.5em;
+    vertical-align: text-top;
+}
+
+.schedule-section img{
+    width: 38px;
+    height: 38px;
+}
+
+.schedule-title{
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.schedule-title-p{
+    color: var(--main-color);
+    font-size: 1.3em;
+}
+
+.schedule-data{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    float: left;
+    gap: 30px;
+    margin-left: 100px;
+    padding: 50px;
+    width: 50%;
+    background-color: var(--background);
+}
+
+.schedule-data_item *{
+    font-size: 1em;
+}
+
+.schedule-data_item select, input{
+    color: var(--main-color);
+    font-weight: bold;
+    display: grid;
+    align-items: center;
+    margin-top: 10px;
+    height: 50px;
+    border: none;
+}
+
+.schedule-button{
+    text-align: center;
+    color: var(--text-color);
+    border-style: none;
+    background: none;
+    font-size: 1.5em;
+}
+
+.submitSchedule-button{
+    color: var(--background);
+    background-color: var(--secondary-color);
+    padding: 20px 35px;
+    font-size: 1.2em;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Reasons section */
+.reasons-section{
+    margin-top: 200px;
+}
+.subtitle-info{
+    font-size: 2em;
+    width: 40%;
+}
+
+.reasons-container{
+    display: flex;
+    /* gap: 25px; */
+    justify-content: space-between;
+    align-items: center;
+    /* align-content: center; */
+    padding: 20px;
+}
+
+.reasons-cards{
+    border-style: solid;
+    border-color: var(--margin-color);
+    border-radius: 15px;
+    border-width: 1px;
+    width: 18%;
+    height: 400px;
+    padding: 40px;
+}
+
+.reasons-cards:hover{
+    box-shadow: rgba(22, 56, 209, 0.15) 0px 48px 100px 0px;
+}
+
+.reasons-text{
+    font-size: 1.5em;
 }
